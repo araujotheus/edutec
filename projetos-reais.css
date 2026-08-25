@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+header {
+    background-color: #0A2342;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px 60px;
+}
+
+
+/* Container da Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 60px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4da6ff;
+}
+
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+
+/* Menu de Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Links do Menu */
+nav ul li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+
+/* Link da página atual / selecionada */
+nav ul li a.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+.page-top {
+
+
+    min-height: 300px;
+
+
+    padding: 0 7% 80px;
+
+
+    background: linear-gradient(
+        to bottom,
+        #a9e5f7 0%,
+        #b9eaf7 100%
+    );
+}
+
+
+
+
+/* =====================================================
+   HOME / PROJETOS REAIS / COMPARTILHAR
+===================================================== */
+
+
+.page-navigation {
+
+
+    width: 100%;
+
+
+    padding: 20px 0;
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    justify-content: space-between;
+}
+
+
+
+
+/* HOME / PROJETOS */
+
+
+.breadcrumb {
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    gap: 10px;
+
+
+    font-size: 11px;
+}
+
+
+.breadcrumb a {
+
+
+    color: #618493;
+
+
+    text-decoration: none;
+}
+
+
+.breadcrumb span {
+
+
+    color: #618493;
+}
+
+
+.breadcrumb strong {
+
+
+    color: #18344d;
+
+
+    font-weight: 600;
+}
+
+
+
+
+/* COMPARTILHAR */
+
+
+.share {
+
+
+    color: #618493;
+
+
+    font-size: 11px;
+}
+
+
+
+
+/* =====================================================
+   TÍTULO
+===================================================== */
+
+
+.page-title {
+
+
+    max-width: 1100px;
+
+
+    margin: 55px auto 0;
+}
+
+
+.page-title h1 {
+
+
+    color: #162b3c;
+
+
+    font-size: 28px;
+
+
+    font-weight: 400;
+
+
+    margin-bottom: 18px;
+}
+
+
+.page-title p {
+
+
+    max-width: 1000px;
+
+
+    color: #618493;
+
+
+    font-size: 14px;
+
+
+    line-height: 1.6;
+}
+
+
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+
+.intro {
+
+
+    max-width: 1100px;
+
+
+    margin: -70px auto 0;
+
+
+    padding-bottom: 50px;
+
+
+    position: relative;
+
+
+    z-index: 2;
+}
+
+
+.intro-image {
+
+
+    width: 100%;
+
+
+    height: 285px;
+
+
+    overflow: hidden;
+
+
+    border-radius: 20px;
+
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+.intro-image img {
+
+
+    width: 100%;
+
+
+    height: 100%;
+
+
+    object-fit: cover;
+}
+
+
+.intro > p {
+
+
+    max-width: 980px;
+
+
+    margin: 25px auto 0;
+
+
+    padding: 0 20px;
+
+
+    color: #8c8c8c;
+
+
+    font-size: 10px;
+
+
+    line-height: 1.6;
+}
+
+
+
+
+/* =====================================================
+   PROJETOS
+===================================================== */
+
+
+.project {
+
+
+    max-width: 1100px;
+
+
+    min-height: 380px;
+
+
+    margin: 0 auto 45px;
+
+
+    display: grid;
+
+
+    grid-template-columns: 1fr 1fr;
+
+
+    align-items: center;
+
+
+    gap: 70px;
+
+
+    position: relative;
+}
+
+
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+
+.project-text {
+
+
+    padding: 20px;
+
+
+    position: relative;
+
+
+    z-index: 3;
+}
+
+
+.project-text h2 {
+
+
+    color: #383838;
+
+
+    font-size: 23px;
+
+
+    font-weight: 400;
+
+
+    line-height: 1.3;
+
+
+    margin-bottom: 20px;
+}
+
+
+.project-text p {
+
+
+    color: #969696;
+
+
+    font-size: 10px;
+
+
+    line-height: 1.6;
+
+
+    margin-bottom: 10px;
+}
+
+
+
+
+/* =====================================================
+   IMAGENS
+===================================================== */
+
+
+.project-image {
+
+
+    width: 100%;
+
+
+    height: 300px;
+
+
+    overflow: hidden;
+
+
+    border-radius: 18px;
+
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+
+    position: relative;
+
+
+    z-index: 2;
+}
+
+
+.project-image img {
+
+
+    width: 100%;
+
+
+    height: 100%;
+
+
+    object-fit: cover;
+
+
+    transition: transform 0.5s ease;
+}
+
+
+.project-image:hover img {
+
+
+    transform: scale(1.03);
+}
+
+
+
+
+/* =====================================================
+   PROJETOS ALTERNADOS
+===================================================== */
+
+
+.project-right .project-image {
+
+
+    order: 1;
+}
+
+
+.project-right .project-text {
+
+
+    order: 2;
+}
+
+
+
+
+/* =====================================================
+   BOLA AZUL-MARINHO
+===================================================== */
+
+
+.shark-image {
+
+
+    overflow: visible;
+
+
+    box-shadow: none;
+
+
+    position: relative;
+
+
+    z-index: 2;
+}
+
+
+.shark-image::before {
+
+
+    content: "";
+
+
+    position: absolute;
+
+
+    width: 420px;
+
+
+    height: 420px;
+
+
+    background-color: #08284e;
+
+
+    border-radius: 50%;
+
+
+    left: -330px;
+
+
+    top: -60px;
+
+
+    z-index: -1;
+}
+
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+
+footer {
+
+
+    width: 100%;
+
+
+    background-color: #2b7bbd;
+
+
+    padding: 50px 80px;
+}
+
+
+.footer-content {
+
+
+    max-width: 1200px;
+
+
+    margin: 0 auto;
+
+
+    display: flex;
+
+
+    justify-content: space-between;
+
+
+    align-items: flex-start;
+}
+
+
+
+
+/* LOGO FOOTER */
+
+
+.footer-logo {
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    gap: 15px;
+
+
+    margin-bottom: 20px;
+}
+
+
+.footer-logo img {
+
+
+    height: 50px;
+}
+
+
+.footer-logo span {
+
+
+    color: #0b1f3f;
+
+
+    font-size: 1.8rem;
+
+
+    font-weight: 700;
+}
+
+
+
+
+/* TEXTOS */
+
+
+.footer-brand {
+
+
+    max-width: 500px;
+}
+
+
+.footer-brand p {
+
+
+    color: #12294b;
+
+
+    font-size: 0.65rem;
+
+
+    line-height: 1.5;
+
+
+    margin-bottom: 10px;
+}
+
+
+
+
+.footer-brand .privacy {
+
+
+    font-weight: 700;
+}
+
+
+
+.social {
+
+
+    display: flex;
+
+
+    gap: 20px;
+
+
+    margin-top: 10px;
+}
+
+
+.social a {
+
+
+    color: #ffffff;
+
+
+    font-size: 1.8rem;
+
+
+    text-decoration: none;
+
+
+    transition: transform 0.3s;
+}
+
+
+.social a:hover {
+
+
+    transform: scale(1.1);
+}
+
+

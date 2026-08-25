@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #01102D;
+    color: white;
+    position: relative;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.circle-left, .circle-right {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle-left {
+    width: 400px;
+    height: 400px;
+    background-color: #55cbf3;
+    bottom: -100px;
+    left: -200px;
+}
+
+.circle-right {
+    width: 500px;
+    height: 500px;
+    background-color: #2a7cc3;
+    top: 15%;
+    right: -250px;
+}
+
+
+header {
+ background-color: #0A2342;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px 60px;
+}
+
+
+/* Container da Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 60px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4da6ff;
+}
+
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+
+/* Menu de Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Links do Menu */
+nav ul li a {
+    color: #d1d1d1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+/* Efeito ao passar o mouse */
+nav ul li a:hover {
+    color: #ffffff;
+}
+
+
+/* Link da página atual / selecionada */
+nav ul li a.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+.quiz-btn {
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+main {
+
+flex: 1;
+
+display: flex;
+
+flex-direction: column;
+
+}
+
+
+.hero {
+    text-align: center;
+    padding: 50px 20px 80px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    color: #1977d4;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    max-width: 900px;
+}
+
+.dolphin-img img {
+    max-width: 450px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+
+.btn-comecar {
+    background-color: #55cbf3;
+    color: #031024;
+    border: none;
+    padding: 12px 45px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-comecar:hover {
+    transform: scale(1.05);
+    background-color: #7de0ff;
+}
+
+.subtitle {
+    color: #55cbf3;
+    font-size: 1.3rem;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+
+footer {
+    background-color: #2a7cc3;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: auto; 
+   
+
+.footer-left {
+    max-width: 600px;
+}
+
+.footer-logo {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.legal-text, .privacy-text {
+    color: #0d3863;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.privacy-text {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-right a {
+    color: white;
+    font-size: 1.8rem;
+    transition: transform 0.2s;
+}
+
+.footer-right a:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsividade Básica */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+}
+}
