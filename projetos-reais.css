@@ -549,149 +549,127 @@ nav ul li a.active {
 
 
 footer {
-
-
     width: 100%;
-
-
-    background-color: #2b7bbd;
-
-
-    padding: 50px 80px;
-}
-
-
-.footer-content {
-
-
-    max-width: 1200px;
-
-
-    margin: 0 auto;
+    min-height: 180px;
+    background-color: #3676ab;
 
 
     display: flex;
-
-
     justify-content: space-between;
-
-
-    align-items: flex-start;
-}
-
-
-
-
-/* LOGO FOOTER */
-
-
-.footer-logo {
-
-
-    display: flex;
-
-
     align-items: center;
 
 
-    gap: 15px;
+    padding: 30px 6%;
+}
 
 
-    margin-bottom: 20px;
+.footer-left {
+    max-width: 600px;
+}
+
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #0b1f3f;
 }
 
 
 .footer-logo img {
-
-
-    height: 50px;
+    width: 80px;
 }
 
 
-.footer-logo span {
-
-
-    color: #0b1f3f;
-
-
-    font-size: 1.8rem;
-
-
-    font-weight: 700;
-}
-
-
-
-
-/* TEXTOS */
-
-
-.footer-brand {
-
-
-    max-width: 500px;
-}
-
-
-.footer-brand p {
-
-
+.legal-text {
+    font-size: 9px;
     color: #12294b;
-
-
-    font-size: 0.65rem;
-
-
-    line-height: 1.5;
-
-
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    line-height: 1.4;
 }
 
 
-
-
-.footer-brand .privacy {
-
-
-    font-weight: 700;
-}
-
-
-
-.social {
-
-
+.footer-right {
     display: flex;
-
-
-    gap: 20px;
-
-
-    margin-top: 10px;
+    align-items: center;
+    gap: 25px;
 }
 
 
-.social a {
 
 
-    color: #ffffff;
-
-
-    font-size: 1.8rem;
-
-
+.footer-right a {
+    color: white;
+    font-size: 28px;
     text-decoration: none;
-
-
-    transition: transform 0.3s;
 }
 
 
-.social a:hover {
-
-
-    transform: scale(1.1);
+.footer-right a:hover {
+    transform: scale(1.15);
 }
 
 
+@media (max-width: 1000px) {
+
+
+    header {
+        height: auto;
+        padding: 25px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .features {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+
+    .hero-image img {
+        height: 250px;
+    }
+
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+        max-width: 400px;
+        margin: auto;
+    }
+
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+
+    .footer-logo {
+        justify-content: center;
+    }
+}

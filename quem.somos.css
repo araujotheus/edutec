@@ -194,90 +194,128 @@ nav ul li a.active {
 }
 
 
-.footer {
-  background-color: #1D75BD;
-  color: #0A2342;
-  padding: 30px 0;
-  position: relative;
-  z-index: 3;
-}
+footer {
+    width: 100%;
+    min-height: 180px;
+    background-color: #3676ab;
 
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    padding: 30px 6%;
 }
 
 
 .footer-left {
-  max-width: 550px;
+    max-width: 600px;
 }
 
 
 .footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
 
 
-.footer-logo .dolphin {
-  font-size: 1.8rem;
-}
-
-
-.footer-logo h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #0A2342;
-}
-
-
-.legal-text {
-  font-size: 0.72rem;
-  line-height: 1.4;
-  color: #0A2342;
-  margin-bottom: 6px;
-}
-
-
-.privacy-link {
-  color: #0A2342;
-  font-size: 0.7rem;
-  text-decoration: underline;
-}
-
-
-.footer-right {
-  display: flex;
-  gap: 16px;
-}
-
-
-.footer-right a {
-  color: #ffffff;
-  font-size: 1.4rem;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
-
-
-.footer-right a:hover {
-  transform: scale(1.1);
+    font-size: 28px;
+    font-weight: bold;
+    color: #0b1f3f;
 }
 
 
 .footer-logo img {
-  height: 45px;      
-  width: auto;      
-  object-fit: contain;
+    width: 80px;
 }
 
 
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.legal-text {
+    font-size: 9px;
+    color: #12294b;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+
+.footer-right a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+
+.footer-right a:hover {
+    transform: scale(1.15);
+}
+
+
+@media (max-width: 1000px) {
+
+
+    header {
+        height: auto;
+        padding: 25px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    .features {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+
+    .hero-image img {
+        height: 250px;
+    }
+
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+
+    .card {
+        max-width: 400px;
+        margin: auto;
+    }
+
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+
+    .footer-logo {
+        justify-content: center;
+    }
 }
