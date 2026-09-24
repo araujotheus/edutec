@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueMind - Mergulho Limpo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./jogo.css">
+</head>
+
+<body class="play-body">
+
+    <div class="play-shell">
+        <div class="play-topbar">
+            <a href="./jogo.html" class="play-exit" aria-label="Sair do jogo">
+                <i class="fa-solid fa-arrow-left"></i> Sair
+            </a>
+            <img src="./logo.png" alt="Logo BlueMind" class="play-logo">
+            <span class="play-title">Mergulho Limpo</span>
+        </div>
+
+        <!-- Painel com as informações da partida -->
+        <div class="hud">
+            <div class="hud-item">
+                <span class="hud-label">Pontos</span>
+                <strong id="hud-score">0</strong>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">Tempo</span>
+                <strong id="hud-time">1:30</strong>
+            </div>
+            <div class="hud-item hud-oxygen" id="hud-oxygen-box">
+                <span class="hud-label"><i class="fa-solid fa-lungs"></i> Oxigênio</span>
+                <div class="oxygen-bar"><div id="hud-oxygen"></div></div>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">Lixo</span>
+                <strong id="hud-trash">0</strong>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">Combo</span>
+                <strong id="hud-combo">x1</strong>
+            </div>
+            <div class="hud-actions">
+                <button type="button" class="hud-btn" id="btn-mute" aria-label="Desativar som">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <button type="button" class="hud-btn" id="btn-pause" aria-label="Pausar">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Área do jogo -->
+        <div class="canvas-wrap">
+            <canvas id="game" aria-label="Jogo Mergulho Limpo: guie o mergulhador para recolher o lixo do fundo do mar"></canvas>
+
+            <div class="countdown" id="countdown" hidden>3</div>
+
+            <div class="overlay" id="pause-menu" hidden>
+                <div class="overlay-box">
+                    <h2>Jogo pausado</h2>
+                    <button type="button" class="btn-play" id="btn-resume"><i class="fa-solid fa-play"></i> CONTINUAR</button>
+                    <button type="button" class="btn-secondary" id="btn-restart"><i class="fa-solid fa-rotate-right"></i> REINICIAR</button>
+                    <a href="./jogo.html" class="btn-secondary"><i class="fa-solid fa-door-open"></i> SAIR</a>
+                </div>
+            </div>
+
+            <div class="overlay" id="game-over" hidden>
+                <div class="overlay-box">
+                    <h2 id="game-over-title">Tempo esgotado!</h2>
+                    <p>Calculando seu resultado...</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="play-hint">
+            <span class="keyboard-only"><kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> ou <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> para nadar</span>
+            <span><i class="fa-solid fa-hand-pointer"></i> No celular: toque e arraste na tela (melhor com o celular deitado)</span>
+            <span class="keyboard-only"><kbd>Esc</kbd> pausa</span>
+        </p>
+    </div>
+
+    <script src="./jogo-desenhos.js"></script>
+    <script src="./jogo.js"></script>
+</body>
+
+</html>
